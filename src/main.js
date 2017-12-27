@@ -17,9 +17,8 @@ const animateSnake = function() {
     drawFood(food);
     return;
   };
-  console.log(snake.isSnakeHitTheWall());
   if (snake.isSnakeHitTheWall()) {
-    clearInterval(animateSnake);
+    clearInterval(animator);
   }
 }
 
@@ -56,7 +55,8 @@ const createSnake = function() {
 const createFood = function(numberOfRows, numberOfCols) {
   food = generateRandomPosition(numberOfCols, numberOfRows);
 }
-
+const endWhenHit = function(){
+}
 
 const endGame = function() {
 
