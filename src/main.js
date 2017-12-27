@@ -8,6 +8,7 @@ const animateSnake = function() {
   let oldHead = snake.getHead();
   let oldTail = snake.move();
   let head = snake.getHead();
+  let body = snake.getBody();
   paintBody(oldHead);
   unpaintSnake(oldTail);
   paintHead(head);
@@ -48,8 +49,8 @@ const createSnake = function() {
   let body = [];
   body.push(tail);
   body.push(tail.next());
-  let head = tail.next().next();
   console.log(body);
+  let head = tail.next().next();
   snake = new Snake(head,body);
 }
 
