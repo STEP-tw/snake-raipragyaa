@@ -16,7 +16,7 @@ const animateSnake = function() {
     createFood(numberOfRows, numberOfCols);
     drawFood(food);
     return;
-  };
+  }
   if (snake.isSnakeHitTheWall()) {
     clearInterval(animator);
   }
@@ -49,18 +49,15 @@ const createSnake = function() {
   body.push(tail);
   body.push(tail.next());
   let head = tail.next().next();
-  snake = new Snake(head, body);
+  console.log(body);
+  snake = new Snake(head,body);
 }
 
 const createFood = function(numberOfRows, numberOfCols) {
   food = generateRandomPosition(numberOfCols, numberOfRows);
 }
-const endWhenHit = function(){
-}
 
-const endGame = function() {
 
-}
 const startGame = function() {
   createSnake();
   drawGrids(numberOfRows, numberOfCols);
@@ -69,7 +66,6 @@ const startGame = function() {
   drawFood(food);
   addKeyListener();
   animator = setInterval(animateSnake, 140);
-  endGame();
 }
 
 window.onload = startGame;

@@ -25,10 +25,10 @@ Snake.prototype={
     this.head=this.head.turnRight();
   },
   isHitX:function(){
-    return this.getHead().x == 0 || this.getHead().x == 118;
+    return this.getHead().x == 0 || this.getHead().x == 119;
   },
   isHitY:function(){
-    return this.getHead().y == 0 || this.getHead().y == 58;
+    return this.getHead().y == 0 || this.getHead().y == 59;
   },
   isSnakeHitTheWall:function(){
     return this.isHitX()||this.isHitY();
