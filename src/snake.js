@@ -23,5 +23,14 @@ Snake.prototype={
   },
   turnRight:function() {
     this.head=this.head.turnRight();
+  },
+  isHitX:function(){
+    return this.getHead().x == 0 || this.getHead().x == 120;
+  },
+  isHitY:function(){
+    return this.getHead().y == 0 || this.getHead().y == 60;
+  },
+  isSnakeHitTheWall:function(){
+    return this.isHitX()||this.isHitY();
   }
 }
